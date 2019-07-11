@@ -1,0 +1,12 @@
+
+<h1>COMMENTS</h1>
+
+
+<% @place.comments.each do |comment|%>
+<div class="">
+  <p><%= comment.content %></p>
+  <p> rating: <%= comment.rating %>
+  <p><i> creado por: <%= comment.user.email %></i></p>
+
+</div>
+<% end %>

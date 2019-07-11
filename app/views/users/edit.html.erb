@@ -1,0 +1,11 @@
+% if flash[:success] %>
+  <div class="success"><%= flash[:success] %></div>
+<% end %>
+
+<h1>Update user´s information</h1>
+
+<%= form_for @place, url:places_path(@place), action: :update do |form| %>
+    Name: <%= form.text_field :name%><br />
+
+    <%= form.submit %>
+<% end %>

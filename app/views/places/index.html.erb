@@ -1,0 +1,38 @@
+<h1>Lugares</h1>
+ <!-- <ul>
+   <li> Veterinaría</li><br>
+   <li>Parque</li><br>
+   <li>Guardería</li><br>
+   <li>Peluquería</li><br>
+   <li>Hotel</li><br>
+   <li>Paseadores</li><br>
+   </ul>-->
+<% if flash[:success] %>
+<div class="success"><%= flash[:success] %></div>
+<% end %>
+
+<h5 class="card-title">LIST OF PLACES</h5>
+
+<% @places.each do |place| %>
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLfR1pXcL49I3fbDIhwbQq_k3bhVmPP2qkpMuv-gNDd2Ab8qfD" alt="Card image cap">
+  <div class="card-body">
+  <h5 class="card-title"><%=place.name%></h5>
+  <ul>
+    <li>Name: <%= place.name %></li>
+    <li>Adress: <%= place.adress %></li>
+    <li>Owner: <%= place.owner %></li>
+    <li>Schedule: <%= place.schedule %></li>
+    <li>Type: <%= place.kind %></li>
+    <li>Number: <%= place.number %></li>
+    </ul>
+<p class="card-text">
+   <%= link_to 'update info', edit_place_path(place) %>
+   <%= link_to 'add comment', new_place_comment_path(place) %>
+   <%= link_to 'show', place_path(place)%>
+<% end %>
+</p>
+</div>
+</div>
+
+</p>

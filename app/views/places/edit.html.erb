@@ -1,0 +1,15 @@
+<% if flash[:success] %>
+  <div class="success"><%= flash[:success] %></div>
+<% end %>
+
+<h1>Update place´s information</h1>
+
+<%= form_for @place do |form| %>
+    Name: <%= form.text_field :name%><br />
+    Adress: <%= form.text_field :adress%><br />
+    Owner: <%= form.text_field :owner%><br />
+    Schedule: <%= form.text_field :schedule%><br />
+    Type: <%= form.text_field :kind%><br />
+    Number: <%= form.text_field :number%><br />
+    <%= form.submit %>
+<% end %>

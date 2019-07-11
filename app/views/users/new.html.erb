@@ -1,0 +1,9 @@
+<% if flash[:success] %>
+<div class="success"><%= flash[:success] %></div>
+<% end %>
+
+<%= form_for :user, url:users_path, action: :create do |form| %>
+  Name: <%= form.text_field :name%><br />
+
+  <%= form.submit 'create user' %>
+<% end %>

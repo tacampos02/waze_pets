@@ -1,0 +1,9 @@
+
+<%= form_for [@user, @place, @comment] do |form| %>
+
+  Content: <%= form.text_area :content %><br />
+  Rating: <%=form.text_field :rating %><br />
+  <div class="text-center">
+    <%= form.submit%>
+  </div>
+<% end %>
