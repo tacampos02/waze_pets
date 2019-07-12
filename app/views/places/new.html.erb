@@ -2,7 +2,6 @@
   <div class="success"><%= flash[:success] %></div>
 <% end %>
 
-<h1>create a new places</h1>
 
 <%= form_for :place, url:places_path, action: :create do |form| %>
     Name: <%= form.text_field :name%><br />
