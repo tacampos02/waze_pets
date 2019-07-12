@@ -1,3 +1,4 @@
+@import "bootstrap";
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -10,11 +11,26 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
- *= require_self
+
  */
+.tittle {
+  background-image: url("https://66.media.tumblr.com/27e2990558896b9261e7462f4cb6f6d2/tumblr_op2p10pcJE1wos4z2o1_250.jpg");
 
-.landing {
+}
+
+.list{
+display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.home-header{
   display: flex;
+  justify-content: space-between;
+}
 
+.carrusel{
+  display: flex;
+width: 50%;
+justify-content: center;
 }
