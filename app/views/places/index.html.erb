@@ -13,12 +13,13 @@
 
 <h1 class="card-title"><FONT FACE="small fonts">LISTA DE LOS LUGARES</FONT></h1>
 
-<% @places.each do |place| %>
-<div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLfR1pXcL49I3fbDIhwbQq_k3bhVmPP2qkpMuv-gNDd2Ab8qfD" alt="Card image cap">
+<p><% @places.each do |place| %>
+<div class="card d-inline-flex " style="width: 18rem;">
+<img class="card-img-top" src= "<%= place.avatar  %>" alt="Card image cap">
   <div class="card-body">
   <h5 class="card-title"><%=place.name%></h5>
   <ul>
+    <%= place.id %>
     <li>Name: <%= place.name %></li>
     <li>Adress: <%= place.adress %></li>
     <li>Owner: <%= place.owner %></li>
@@ -30,9 +31,9 @@
    <%= link_to 'update info', edit_place_path(place) %>
    <%= link_to 'add comment', new_place_comment_path(place) %>
    <%= link_to 'show', place_path(place)%>
+ </p>
+</div>
+</div>
 <% end %>
-</p>
-</div>
-</div>
 
 </p>

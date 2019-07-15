@@ -26,7 +26,6 @@ class PlacesController < ApplicationController
   def update
     id = params[:id]
     @place = Place.find(id)
-    place_params = params[:place]
     @place.update(places_params)
     flash[:success] = 'Your place was update'
     redirect_to  '/places'
@@ -34,6 +33,6 @@ class PlacesController < ApplicationController
   private
 
   def places_params
-    params.require(:place).permit(:name, :adress, :owner, :schedule, :kind, :number )
+    params.require(:place).permit(:name, :adress, :owner, :schedule, :kind, :number, :avatar)
   end
 end
